@@ -6,8 +6,9 @@ import type { Project } from "./types";
  * `layout` controls how it is presented in the showcase.
  */
 
-/** Every client project ran with the same five-person setup. */
+/** Most client projects ran with the same five-person setup. */
 const TEAM = "Five-person team — frontend, backend (me), QA, PM and a lead engineer";
+const THREE_PERSON_TEAM = "Three-person team — frontend, backend (me) and PM";
 
 export const projects: Project[] = [
   {
@@ -16,7 +17,7 @@ export const projects: Project[] = [
     name: "Angel",
     tagline: "Therapy automation that turns session audio into approved summaries and multi-speaker podcast audio.",
     layout: "wide",
-    role: "Backend engineer",
+    role: "Backend & DevOps engineer",
     status: "live",
     team: TEAM,
     overview:
@@ -187,7 +188,7 @@ export const projects: Project[] = [
     layout: "pair",
     role: "Backend engineer · frontend integration",
     status: "offline",
-    team: TEAM,
+    team: THREE_PERSON_TEAM,
     overview:
       "Fanbai was an AI character platform, previously live. Users upload character cards — PNG images with the character's data hidden in the file's metadata. The backend extracts that data and turns it into the character's persona, and replies are streamed from a self-hosted model served with vLLM.",
     contribution: [
@@ -321,7 +322,6 @@ export const projects: Project[] = [
     layout: "row",
     role: "Backend engineer",
     status: "prototype",
-    team: TEAM,
     overview:
       "A prototype built to demo to a client. The user speaks, Distil-Whisper transcribes, an OpenAI model writes the reply and StyleTTS2 speaks it back. The speech models were small enough to self-host on a local GTX 1650 GPU.",
     contribution: [
@@ -361,7 +361,7 @@ export const projects: Project[] = [
     tagline: "Mobile trading card inventory and valuation platform.",
     layout: "row",
     role: "Frontend engineer (React Native)",
-    team: "Five-person team — frontend (me), backend, QA, PM and a lead engineer",
+    team: "Three-person team — frontend (me), backend and PM",
     overview:
       "A mobile platform for trading card inventory and valuation: cards are captured from the camera or photo library, read through an OCR pipeline and valued.",
     contribution: [
@@ -396,7 +396,7 @@ export const projects: Project[] = [
     tagline: "Course-outline scraping platform that cut data collection from days to hours.",
     layout: "row",
     role: "Backend engineer",
-    team: TEAM,
+    team: THREE_PERSON_TEAM,
     overview:
       "A platform for scraping course outlines, combining HTML parsing with browser automation. It cut course-outline data collection from days to hours.",
     outcomes: ["Course-outline data collection cut from days to hours"],

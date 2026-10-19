@@ -34,12 +34,6 @@ export function About() {
                   of a product that also needs clean APIs, data, payments, infrastructure and a path to production.
                 </p>
               </Reveal>
-              <Reveal delay={0.1} className="md:col-span-2">
-                <p className="max-w-[68ch] text-[16.5px] leading-relaxed text-muted">
-                  I usually work as the backend engineer on a five-person team — alongside frontend, QA, a PM and a lead engineer
-                  — owning the API and the AI integration, and often the infrastructure and deployment too.
-                </p>
-              </Reveal>
             </div>
 
             <Reveal delay={0.12}>

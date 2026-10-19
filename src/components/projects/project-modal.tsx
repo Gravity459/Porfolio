@@ -192,10 +192,16 @@ function ProjectDetail({
               className="mx-auto grid w-full max-w-[76rem] grid-cols-12 gap-x-6 gap-y-12 px-4 pb-20 pt-10 md:px-8 md:pt-14 lg:gap-x-12"
             >
               {/* Meta rail */}
-              <aside className="col-span-12 lg:col-span-4">
+              <aside className="@container col-span-12 min-w-0 lg:col-span-4">
                 <div className="flex flex-col gap-6 lg:sticky lg:top-10">
                   <div>
-                    <Dialog.Title className="type-h2 text-balance">{project.name}</Dialog.Title>
+                    {/* Cap the size by the rail width so long single words (e.g. "Conversational") never overflow */}
+                    <Dialog.Title
+                      className="type-h2 text-balance"
+                      style={{ fontSize: "min(clamp(2.125rem, 4.6vw, 4.25rem), 13cqi)" }}
+                    >
+                      {project.name}
+                    </Dialog.Title>
                     <Dialog.Description className="type-lede mt-4 text-pretty text-muted">{project.tagline}</Dialog.Description>
                   </div>
                   {project.role || project.status || project.team ? (

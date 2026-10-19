@@ -2,7 +2,7 @@
 export const site = {
   name: "Talha Rana",
   title: "AI Backend Engineer",
-  url: "https://talha-rana.dev", // TODO: production URL
+  url: "https://talha-rana.vercel.app",
   description:
     "Talha Rana — AI Backend Engineer building production LLM applications, AI agents, RAG systems, backend APIs and cloud infrastructure.",
   email: "talha.rana08@gmail.com", // TODO: real email
