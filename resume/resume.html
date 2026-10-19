@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Talha Rana — Resume</title>
+<!--
+  Source for public/Talha_Rana_Resume.pdf. Rebuild with:
+  chrome --headless --no-pdf-header-footer --print-to-pdf=public/Talha_Rana_Resume.pdf resume/resume.html
+  Only real, defensible numbers belong here.
+-->
+<style>
+  @page { size: A4; margin: 14mm 15mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 9.6pt; line-height: 1.38; color: #111; }
+  a { color: inherit; text-decoration: none; }
+  h1 { font-size: 20pt; letter-spacing: 0.04em; font-weight: 700; }
+  .title { font-size: 10.5pt; color: #333; margin-top: 1px; }
+  .contact { margin-top: 5px; color: #333; font-size: 9pt; }
+  .contact span + span::before { content: "|"; margin: 0 6px; color: #999; }
+  h2 { font-size: 10pt; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid #222; padding-bottom: 2px; margin: 11px 0 5px; }
+  .row { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .role { font-weight: 700; }
+  .meta { color: #444; font-size: 9pt; white-space: nowrap; }
+  .stack { color: #444; font-size: 8.8pt; font-style: italic; }
+  ul { padding-left: 14px; margin: 2px 0 6px; }
+  li { margin-bottom: 1.5px; }
+  .skills p { margin-bottom: 1.5px; }
+  .skills b { display: inline-block; min-width: 92px; }
+  .entry { break-inside: avoid; }
+</style>
+</head>
+<body>
+  <h1>TALHA RANA</h1>
+  <p class="contact">
+    <span>Karachi, Pakistan</span><span>+92-331-0369832</span><span>talha.rana08@gmail.com</span><span>linkedin.com/in/talha-rana</span><span>github.com/Gravity459</span>
+  </p>
+
+  <h2>Professional Summary</h2>
+  <p>AI Backend Engineer with 3+ years of experience architecting and deploying production-grade LLM agents, RAG pipelines, and cloud-native APIs using Python, FastAPI, LangChain, LangGraph, and AWS. Experienced in remote-first delivery, async collaboration, and independently shipping end-to-end AI systems. Two systems currently live in production: a therapy-automation pipeline that has processed 500+ sessions and a HIPAA-scoped legal platform with 20+ users.</p>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <p><b>Languages</b> Python, TypeScript, JavaScript, SQL, Bash</p>
+    <p><b>AI / LLMOps</b> LangChain, LangGraph, LangSmith, vLLM, Qdrant, Guardrails AI, ElevenLabs STT/TTS, Whisper, StyleTTS2, Claude, Gemini, OpenAI, LLaMA</p>
+    <p><b>Backend</b> FastAPI, Flask, REST API Design, Microservices, JWT Auth, WebSockets, Tool Calling / Function Calling</p>
+    <p><b>Frontend</b> Next.js, React Native (Expo), ElectronJS, TypeScript</p>
+    <p><b>Databases / Cache</b> PostgreSQL, MongoDB, MySQL, Redis, Valkey, SQLAlchemy / SQLModel, Alembic</p>
+    <p><b>Cloud &amp; DevOps</b> AWS (EC2, S3, SES, SQS, ALB, Elastic Beanstalk, Amplify, CloudFront, RDS, KMS, WAF, Secrets Manager), Docker, GitHub Actions, Cloudflare R2, Sentry</p>
+    <p><b>Testing &amp; Tooling</b> pytest, Unit Testing, LangSmith Tracing, Selenium, Playwright</p>
+  </div>
+
+  <h2>Professional Experience</h2>
+  <div class="entry">
+    <div class="row"><span class="role">AI Backend Engineer | Kodexo Labs</span><span class="meta">Apr 2025 – Present | Hybrid | Karachi, Pakistan</span></div>
+    <ul>
+      <li>Built modular LLM agent pipelines with LangChain and LangGraph, traced and debugged with LangSmith.</li>
+      <li>Integrated Guardrails AI across inference endpoints to enforce structured outputs.</li>
+      <li>Built FastAPI inference APIs with tool / function calling for multi-step AI workflows.</li>
+      <li>Set up CI/CD with Docker and GitHub Actions for multi-environment AWS deployments (EC2, S3, ALB).</li>
+      <li>Built conversational and audio AI workflows with ElevenLabs STT/TTS, Claude Sonnet 4.6 and SendGrid.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="role">Full Stack Engineer | Bleed AI</span><span class="meta">Sep 2023 – Apr 2025 | Remote | United States</span></div>
+    <ul>
+      <li>Integrated StyleTTS2 and Whisper speech features into cross-platform production applications.</li>
+      <li>Built and maintained a cross-platform Electron desktop application in production.</li>
+      <li>Designed PostgreSQL data models with SQLModel and optimised query plans for production loads.</li>
+      <li>Built FastAPI REST APIs with real-time streaming for AI product features.</li>
+      <li>Provisioned cloud infrastructure on AWS (EC2, S3) and Cloudflare R2.</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="entry">
+    <div class="row"><span class="role">Angel — Therapy Automation Pipeline (live)</span><span class="stack">FastAPI, MongoDB, ElevenLabs Scribe v2 &amp; v3 Alpha, Claude Sonnet 4.6, AWS</span></div>
+    <ul>
+      <li>Turns therapy session audio into transcripts, summaries, podcast scripts and multi-speaker audio; ~500 sessions processed in production.</li>
+      <li>Replaces 4–5 hours of therapist work per session with a 20–30 minute pipeline run, with a therapist approval step before script generation.</li>
+      <li>GDPR-compliant, encrypted at rest and in transit; deployed on Elastic Beanstalk with CloudFront, WAF, SQS, KMS and Secrets Manager.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="role">Settle Wing — Legal Services Platform (live)</span><span class="stack">FastAPI, MongoDB, Stripe, Sentry, Elastic Beanstalk, Amplify, GitHub Actions</span></div>
+    <ul>
+      <li>Owned backend, Stripe payments and AWS infrastructure for a platform handling legal documents including medical records; live with 20+ users.</li>
+      <li>HIPAA-scoped encryption across database, cloud, payments and error monitoring; dev, staging and production released through GitHub Actions.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="role">Diesel Repair — Intelligent RAG System</span><span class="stack">FastAPI, PostgreSQL (RDS), Qdrant, LLaMA 4 Maverick, OpenAI embeddings</span></div>
+    <ul>
+      <li>Owned backend and AI integration for a diagnostic assistant over 15,000+ repair notes, embedded with text-embedding-3-small and searched in Qdrant.</li>
+      <li>Internal testing traced shallow answers to terse, flat source notes rather than to retrieval.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="role">Fanbai — AI Character Chat Platform</span><span class="stack">FastAPI, vLLM, PostgreSQL, SQLModel, Alembic, Stripe, Cloudflare R2, Next.js</span></div>
+    <ul>
+      <li>Backend for a previously live character-chat product: personalities read from metadata embedded in PNG character cards, replies streamed from a self-hosted model on vLLM.</li>
+      <li>Stripe payments, R2 asset storage, Alembic-managed PostgreSQL schema; integrated the API with the Next.js frontend.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="role">Hooked AI — Social Media Growth Platform</span><span class="stack">FastAPI, LangChain, MongoDB, Stripe, S3</span></div>
+    <ul>
+      <li>Agent-Supervisor architecture: a supervisor agent routes work to a content generation agent and a content growth agent.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="role">Amarco — AI Agent Tool Calling System</span><span class="stack">FastAPI, LangChain, LangSmith, MongoDB, Microsoft Graph API</span></div>
+    <ul>
+      <li>Agent with tools for email, calendar and SharePoint via Microsoft Graph, with results persisted to MongoDB and traced in LangSmith.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="role">Real-Time Conversational AI (prototype)</span><span class="stack">FastAPI, Distil-Whisper, OpenAI, StyleTTS2</span></div>
+    <ul>
+      <li>Voice-to-voice STT → LLM → TTS loop built as a client demo, with speech models self-hosted on a local GPU and pause-based turn-taking.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="role">Smart Trading Card App — Frontend</span><span class="stack">Expo React Native, FastAPI, Azure Vision API</span></div>
+    <ul>
+      <li>Built the React Native app: camera and photo-library capture, integrated with an OCR backend for card inventory and valuation.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="role">Academia Navigator — Web Scraping Automation</span><span class="stack">FastAPI, Selenium, BeautifulSoup4</span></div>
+    <ul>
+      <li>Course-outline extraction with Selenium and BeautifulSoup4 that cut data collection from days to hours.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="role">Thesia Character — AI Desktop Platform</span><span class="stack">ElectronJS, Next.js, TypeScript, FastAPI, PostgreSQL, Cloudflare R2</span></div>
+    <ul>
+      <li>Cross-platform AI desktop app with a FastAPI / PostgreSQL / R2 backend and oobabooga text-generation integration.</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+  <div class="row"><span><b>Bachelor of Science in Computer Science</b></span><span class="meta">CGPA: 3.6 / 4.0</span></div>
+  <p>FAST National University, Karachi, Pakistan | Aug 2019 – May 2023</p>
+  <p style="margin-top:3px">Languages: English (Advanced C1 / Fluent) · Urdu (Native)</p>
+</body>
+</html>
