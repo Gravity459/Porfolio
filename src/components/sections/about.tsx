@@ -16,22 +16,23 @@ export function About() {
           <div className="col-span-12 md:col-span-9">
             <h2 id="about-title" className="type-h3 max-w-[26ch] text-balance md:text-[clamp(1.875rem,3.4vw,3rem)]">
               <RevealText
-                text="I turn ideas into reliable production systems — where AI meets real software engineering."
-                mutedFrom={7}
+                text="I own the backend, the AI layer and the path to production."
+                mutedFrom={4}
               />
             </h2>
 
             <div className="mt-12 grid gap-x-10 gap-y-6 md:mt-16 md:grid-cols-2">
               <Reveal>
                 <p className="text-[16.5px] leading-relaxed text-ink/90">
-                  I&apos;m an AI Backend Engineer focused on turning ideas into reliable production systems. I work across backend
-                  architecture, LLM applications, AI agents, RAG pipelines and cloud infrastructure.
+                  I usually own a product&apos;s backend and its deployment together. On Settle Wing that meant the FastAPI API, Stripe
+                  payments and the AWS setup across development, staging and production. At ZOD AI it means features across NestJS,
+                  FastAPI, a LangGraph agent and a Rust desktop app.
                 </p>
               </Reveal>
               <Reveal delay={0.08}>
                 <p className="text-[16.5px] leading-relaxed text-muted">
-                  The systems I enjoy most are the ones where AI meets real software engineering — where a model is only one part
-                  of a product that also needs clean APIs, data, payments, infrastructure and a path to production.
+                  Next, I want a product team where AI is part of the core product. I&apos;m open to relocating with visa sponsorship, or
+                  to remote work. I&apos;m in Karachi (PKT, UTC+5): a full working day of overlap with Europe, and mornings with the US.
                 </p>
               </Reveal>
             </div>

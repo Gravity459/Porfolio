@@ -12,12 +12,84 @@ const THREE_PERSON_TEAM = "Three-person team — frontend, backend (me) and PM";
 
 export const projects: Project[] = [
   {
-    slug: "angel",
+    slug: "cr8-ai",
     index: "01",
+    name: "CR8 AI",
+    tagline: "AI design platform at ZOD AI: brand toolkit PDFs turned into design knowledge, key-visual versioning and a six-service stack.",
+    layout: "feature",
+    role: "ZOD AI · Full Stack AI Engineer",
+    team: "Product team at ZOD AI. Work marked (team) was co-authored with a teammate.",
+    overview:
+      "CR8 AI is an AI design platform made of six services: a React/TypeScript/Konva frontend, a NestJS main backend, a Python LangGraph agent service, a Rust/Tauri desktop app, a FastAPI backend and a Node.js WebSocket collaboration service. I work across all of them.",
+    outcomes: [
+      "Thumbnails off by default removed about 715 unused files on a 71-page toolkit, roughly 80% of a run's published files",
+      "Image uploads raised to 200 MB by moving validation off the API thread to an Azure queue worker",
+    ],
+    contribution: [
+      "Built Toolkit Processing end to end: a Gemini pipeline that turns brand toolkit PDFs into validated design knowledge, run on an Azure queue worker",
+      "Toolkit library, upload and review pages, CRUD API, data model and versioning",
+      "Key-visual versioning and duplicate detection using DINOv2 visual similarity, layer overlap, box IoU, text changes and file names, with PostgreSQL migrations and a backfill script",
+      "Resumable Azure block uploads in Rust with progress reporting",
+      "Moved the design agent to a deterministic engine without breaking old chats, and traced the LangGraph agent with Langfuse",
+      "Live progress from the desktop app, FastAPI and the agent to the chat UI over SSE (team)",
+      "GitHub Actions CI/CD for dev and production on AWS, Docker images and Nginx on Elastic Beanstalk",
+    ],
+    stack: ["Python", "Gemini", "LangGraph", "Langfuse", "FastAPI", "NestJS", "React", "TypeScript", "Konva", "Rust", "Tauri", "DINOv2", "PostgreSQL", "Azure Blob Storage", "SSE", "GitHub Actions", "AWS"],
+    highlights: [
+      "Gemini pipeline that turns brand toolkit PDFs into validated design knowledge",
+      "Duplicate detection with DINOv2 similarity, box IoU and layer overlap",
+      "Resumable Rust uploads and 200 MB image uploads via an Azure queue worker",
+    ],
+    architecture: {
+      kind: "stack",
+      layers: [
+        {
+          label: "Clients",
+          items: [
+            { label: "React", sub: "typescript · konva" },
+            { label: "Desktop app", sub: "rust · tauri" },
+          ],
+        },
+        {
+          label: "Services",
+          items: [
+            { label: "NestJS", sub: "main backend" },
+            { label: "FastAPI", sub: "python backend" },
+            { label: "WebSocket", sub: "node.js collab" },
+          ],
+        },
+        {
+          label: "AI",
+          items: [
+            { label: "LangGraph agent", sub: "traced in langfuse" },
+            { label: "Gemini", sub: "toolkit processing" },
+            { label: "DINOv2", sub: "duplicate detection" },
+          ],
+        },
+        {
+          label: "Data",
+          items: [
+            { label: "PostgreSQL", sub: "migrations" },
+            { label: "Azure", sub: "blob storage · queue worker" },
+          ],
+        },
+      ],
+    },
+    architectureLabel:
+      "Layered architecture: React and Rust/Tauri desktop clients, NestJS, FastAPI and Node.js WebSocket services, a LangGraph agent with Gemini toolkit processing and DINOv2 duplicate detection, and PostgreSQL with Azure blob storage and queue workers.",
+    challenges: [
+      "Moving the design agent to a deterministic engine while old chats kept working.",
+      "Telling a new key visual from a reprocessed one: an identical file now becomes version N+1 instead of a duplicate.",
+      "Large uploads: validation moved to a queue worker so the API thread stays free.",
+    ],
+  },
+  {
+    slug: "angel",
+    index: "02",
     name: "Angel",
     tagline: "Therapy automation that turns session audio into approved summaries and multi-speaker podcast audio.",
     layout: "wide",
-    role: "Backend & DevOps engineer",
+    role: "Client · Backend & DevOps engineer",
     status: "live",
     team: TEAM,
     overview:
@@ -85,11 +157,11 @@ export const projects: Project[] = [
   },
   {
     slug: "settle-wing",
-    index: "02",
+    index: "03",
     name: "Settle Wing",
     tagline: "Legal services platform for sensitive client documents — live with 20+ users.",
     layout: "split-left",
-    role: "Backend & DevOps engineer",
+    role: "Client · Backend & DevOps engineer",
     status: "live",
     team: TEAM,
     overview:
@@ -133,11 +205,11 @@ export const projects: Project[] = [
   },
   {
     slug: "diesel-repair",
-    index: "03",
+    index: "04",
     name: "Diesel Repair",
     tagline: "RAG diagnostic assistant over 15,000+ diesel repair notes, answered by LLaMA 4 Maverick.",
     layout: "split-right",
-    role: "Backend & AI integration",
+    role: "Client · Backend & AI integration",
     team: TEAM,
     overview:
       "A diagnostic assistant for diesel repair. More than 15,000 repair notes from a spreadsheet are ingested, embedded with OpenAI text-embedding-3-small and indexed in QDrant. Each question retrieves the most relevant notes and LLaMA 4 Maverick answers from them, with application data in PostgreSQL on RDS. Internal testers used it during development.",
@@ -182,11 +254,11 @@ export const projects: Project[] = [
   },
   {
     slug: "fanbai",
-    index: "04",
+    index: "05",
     name: "Fanbai",
     tagline: "AI character chat that reads each character's personality straight from its PNG character card.",
-    layout: "pair",
-    role: "Backend engineer · frontend integration",
+    layout: "split-left",
+    role: "Client · Backend engineer · frontend integration",
     status: "offline",
     team: THREE_PERSON_TEAM,
     overview:
@@ -243,11 +315,11 @@ export const projects: Project[] = [
   },
   {
     slug: "hooked-ai",
-    index: "05",
+    index: "06",
     name: "Hooked AI",
     tagline: "AI-powered social media growth platform.",
-    layout: "pair",
-    role: "Backend engineer",
+    layout: "row",
+    role: "Client · Backend engineer",
     team: TEAM,
     overview:
       "A social media growth platform powered by AI workflows, coordinated through an Agent-Supervisor architecture.",
@@ -280,11 +352,11 @@ export const projects: Project[] = [
   },
   {
     slug: "amarco",
-    index: "06",
+    index: "07",
     name: "Amarco AI Chatbot",
     tagline: "AI assistant that works across emails, meeting schedules and SharePoint files.",
     layout: "row",
-    role: "Backend engineer",
+    role: "Client · Backend engineer",
     team: TEAM,
     overview:
       "An AI assistant capable of interacting with emails, meeting schedules and SharePoint files, built on agent tools and external API integrations.",
@@ -316,11 +388,11 @@ export const projects: Project[] = [
   },
   {
     slug: "realtime-voice",
-    index: "07",
+    index: "08",
     name: "Real-Time Conversational AI",
     tagline: "Voice-to-voice AI prototype — speech-to-text, LLM and text-to-speech in one conversation loop.",
     layout: "row",
-    role: "Backend engineer",
+    role: "Client · Backend engineer",
     status: "prototype",
     overview:
       "A prototype built to demo to a client. The user speaks, Distil-Whisper transcribes, an OpenAI model writes the reply and StyleTTS2 speaks it back. The speech models were small enough to self-host on a local GTX 1650 GPU.",
@@ -356,11 +428,11 @@ export const projects: Project[] = [
   },
   {
     slug: "trading-card-ocr",
-    index: "08",
+    index: "09",
     name: "Smart Trading Card OCR",
     tagline: "Mobile trading card inventory and valuation platform.",
     layout: "row",
-    role: "Frontend engineer (React Native)",
+    role: "Client · Frontend engineer (React Native)",
     team: "Three-person team — frontend (me), backend and PM",
     overview:
       "A mobile platform for trading card inventory and valuation: cards are captured from the camera or photo library, read through an OCR pipeline and valued.",
@@ -391,11 +463,11 @@ export const projects: Project[] = [
   },
   {
     slug: "academia-navigator",
-    index: "09",
+    index: "10",
     name: "Academia Navigator",
     tagline: "Course-outline scraping platform that cut data collection from days to hours.",
     layout: "row",
-    role: "Backend engineer",
+    role: "Client · Backend engineer",
     team: THREE_PERSON_TEAM,
     overview:
       "A platform for scraping course outlines, combining HTML parsing with browser automation. It cut course-outline data collection from days to hours.",

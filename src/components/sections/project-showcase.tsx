@@ -95,7 +95,7 @@ export function ProjectShowcase() {
       <div className="shell">
         <SectionHeading
           id="work-title"
-          index="02"
+          index="01"
           label="Selected work"
           title="Systems designed, built and shipped."
           aside={<p className="meta text-muted">{projects.length} projects</p>}

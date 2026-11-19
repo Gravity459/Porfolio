@@ -49,7 +49,7 @@ export function Infrastructure() {
           id="infrastructure-title"
           index="04"
           label="Infrastructure"
-          title="AWS services I've deployed with."
+          title="Cloud services I've deployed with."
         />
 
         <div className="mt-16 grid grid-cols-12 gap-x-6 gap-y-14 md:mt-24 lg:gap-x-12">

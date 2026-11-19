@@ -8,9 +8,9 @@ export function Footer() {
       <div className="shell grid grid-cols-12 gap-y-6 py-10">
         <div className="col-span-12 flex flex-col gap-1.5 md:col-span-6">
           <p className="text-[14px] font-medium tracking-[-0.01em]">
-            {site.name} <span className="text-muted">— {site.title}</span>
+            {site.name} <span className="text-muted">· {site.title}</span>
           </p>
-          <p className="font-mono text-[12px] text-faint">Built with curiosity, caffeine &amp; code.</p>
+          <p className="font-mono text-[12px] text-faint">{site.location} · {site.remote}</p>
         </div>
         <div className="col-span-12 flex items-center gap-1 md:col-span-6 md:justify-end">
           <a

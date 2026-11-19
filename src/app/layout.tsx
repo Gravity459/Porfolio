@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   description: site.description,
   authors: [{ name: site.name }],
-  keywords: ["AI Backend Engineer", "LLM", "RAG", "AI Agents", "FastAPI", "Python", "AWS", site.name],
+  keywords: ["Full Stack AI Engineer", "AI Engineer", "LLM", "RAG", "AI Agents", "FastAPI", "Python", "TypeScript", "AWS", site.name],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

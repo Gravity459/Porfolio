@@ -68,7 +68,7 @@ export function Expertise() {
   return (
     <section id="expertise" aria-labelledby="expertise-title" className="pb-20 pt-12 md:pb-28 md:pt-20">
       <div className="shell">
-        <SectionHeading id="expertise-title" index="01" label="Expertise" title="Engineering across the whole AI product." />
+        <SectionHeading id="expertise-title" index="03" label="Expertise" title="Engineering across the whole AI product." />
 
         {/* Desktop: domain index + panel */}
         <Tabs.Root

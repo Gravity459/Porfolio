@@ -7,7 +7,7 @@ export function Experience() {
   return (
     <section id="experience" aria-labelledby="experience-title" className="py-20 md:py-28">
       <div className="shell">
-        <SectionHeading id="experience-title" index="03" label="Experience" title="Where the work happened." />
+        <SectionHeading id="experience-title" index="02" label="Experience" title="Where the work happened." />
 
         <ol className="mt-16 md:mt-20">
           {experience.map((role, i) => (

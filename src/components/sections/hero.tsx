@@ -36,8 +36,8 @@ export function Hero() {
         <div className="mt-10 grid grid-cols-12 gap-x-6 gap-y-8 md:mt-14">
           <Reveal immediate delay={0.45} className="col-span-12 md:col-span-7 lg:col-span-6">
             <p className="type-lede max-w-[46ch] text-pretty text-muted">
-              <span className="text-ink">AI Backend Engineer</span> specializing in production LLM applications, intelligent agents, RAG
-              systems, backend APIs, and cloud infrastructure.
+              <span className="text-ink">Full Stack AI Engineer</span> with 3+ years of shipping AI to production. Angel has processed
+              about 500 therapy sessions live, and Settle Wing is a HIPAA-scoped legal platform with 20+ users.
             </p>
             <p className="meta mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-muted">
               <span className="text-faint">Currently</span>
@@ -47,7 +47,7 @@ export function Hero() {
               <span>{site.current.company}</span>
             </p>
             <p className="meta mt-1.5 text-faint">
-              {site.location} · Remote worldwide · Shipping AI products since {site.careerStart}
+              {site.location} (UTC+5) · Open to relocation and remote · Shipping AI products since {site.careerStart}
             </p>
           </Reveal>
           <Reveal immediate delay={0.55} className="col-span-12 flex flex-wrap items-center gap-3 md:col-span-5 md:justify-end lg:col-span-6">
